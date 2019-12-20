@@ -147,7 +147,11 @@ uniq(names, function(uniqArr){
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-//Code Here 
+function each (array, cb) {
+  for (let i = 0; i < array.length; i++){
+  cb (array[i], i)
+  }
+}
 
 // Do not edit the code below.
 each(names, function(item, indice){
