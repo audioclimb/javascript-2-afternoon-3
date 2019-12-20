@@ -70,8 +70,8 @@ last(names, function(lastName){
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
-function multiply (2, 4, callback) {
-  return callback(multiply[0 * 1])
+function multiply (num1, num2, callback) {
+  callback(num1 * num2)
 };
 
 // Do not edit the code below.
@@ -91,7 +91,15 @@ multiply(4, 3, function(answer){
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here 
+function contains (array, name, callback) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === name) {
+      return callback (true)
+    }
+  }
+  return callback (false)
+};
+
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -112,7 +120,17 @@ contains(names, 'Colt', function(result){
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
 */
 
-//Code Here
+function uniq (array, cb) {
+  for (let i = 0; i < array.length; i++) {
+    for (let d = 0; d < array.length; d++) {
+      if (array[i] === array[d] && i!==d) {
+        array.splice(d, 1)
+      }
+      
+    }
+  }
+  return cb (array)
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
