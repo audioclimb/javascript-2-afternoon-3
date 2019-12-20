@@ -27,7 +27,10 @@
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// Code Here 
+function first (array, callback) {
+  return callback(array[0]);
+};
+
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -47,7 +50,9 @@ first(names, function(firstName){
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-//Code Here
+function last (array, callback) {
+  return callback(array[array.length - 1])
+};
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -65,7 +70,9 @@ last(names, function(lastName){
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
-//Code Here
+function multiply (2, 4, callback) {
+  return callback(multiply[0 * 1])
+};
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
